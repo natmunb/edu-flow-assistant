@@ -62,7 +62,7 @@ const Dashboard = () => {
             <div className="flex items-center gap-2">
               <Sparkles className="h-6 w-6 text-primary" />
               <span className="text-xl font-bold bg-gradient-hero bg-clip-text text-transparent">
-                LessonAI
+                ThinkForge
               </span>
             </div>
             <div className="flex items-center gap-4">

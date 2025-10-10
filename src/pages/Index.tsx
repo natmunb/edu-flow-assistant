@@ -68,7 +68,7 @@ const Index = () => {
             <div className="flex items-center gap-2">
               <Sparkles className="h-6 w-6 text-primary" />
               <span className="text-xl font-bold bg-gradient-hero bg-clip-text text-transparent">
-                LessonAI
+                ThinkForge
               </span>
             </div>
             <div className="flex items-center gap-6">
@@ -168,7 +168,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 border-t border-border bg-muted/20">
         <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>&copy; 2025 LessonAI. Empowering educators worldwide.</p>
+          <p>&copy; 2025 ThinkForge. Empowering educators worldwide.</p>
         </div>
       </footer>
     </div>
