@@ -151,7 +151,7 @@ const Index = () => {
       <section
         className="relative overflow-hidden py-20 md:py-32 bg-cover bg-center bg-no-repeat w-full max-w-[100vw]"
         style={{
-          backgroundImage: "url('/Hero.png')",
+          backgroundImage: "url('../public/Hero.png')",
         }}
       >
         <div className="absolute inset-0 bg-black/40" />
