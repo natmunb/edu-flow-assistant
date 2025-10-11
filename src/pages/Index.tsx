@@ -2,9 +2,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { LanguageSwitcher, Language } from "@/components/LanguageSwitcher";
-import { translations } from "@/lib/translations";
 import { useLanguage } from "@/contexts/LanguageContext";
-
+import { useNavigate } from "react-router-dom";
 import {
   Mic,
   BookOpen,
@@ -17,10 +16,9 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 
 const Index = () => {
-  const { t, language, setLanguage } = useLanguage(); // ✅ único ponto de tradução
+  const { t, language, setLanguage } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -156,7 +154,6 @@ const Index = () => {
           backgroundImage: "url('/Hero.png')",
         }}
       >
-        {/* overlay para contraste */}
         <div className="absolute inset-0 bg-black/40" />
 
         <div className="container mx-auto px-4 relative z-10">
@@ -165,28 +162,24 @@ const Index = () => {
               <Sparkles className="h-4 w-4" />
               {t.hero.subtitle}
             </div>
+
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
               {t.hero.title}
             </h1>
+
             <p className="text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
               {t.hero.description}
             </p>
 
-            {/* BOTÕES */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-              {/* Watch Demo - azul sólido */}
               <Button
                 size="lg"
                 className="text-lg gap-2 shadow-glow bg-primary text-white hover:bg-primary/90"
-                onClick={() => {
-                  const section = document.getElementById("demo-video");
-                  if (section) section.scrollIntoView({ behavior: "smooth" });
-                }}
+                onClick={() => navigate("/dashboard")}
               >
-                {t.hero.demo}
+                Demo Test
               </Button>
 
-              {/* Get Started - transparente */}
               <Button
                 size="lg"
                 variant="outline"
@@ -236,7 +229,6 @@ const Index = () => {
               Join thousands of educators using AI to enhance their lessons.
             </p>
 
-            {/* Demo Video */}
             <div
               id="demo-video"
               className="relative w-full max-w-3xl mx-auto aspect-video mb-10 rounded-2xl overflow-hidden shadow-xl scroll-mt-24"
