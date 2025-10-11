@@ -108,7 +108,7 @@ const Tasks = () => {
               </h3>
 
               <img
-                src="../public/chart1.png"
+                src="./public/chart1.png"
                 alt="Consolidated Task Analysis"
                 className="w-full h-[400px] object-contain rounded-lg border border-gray-200"
               />
