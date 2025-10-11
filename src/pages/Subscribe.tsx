@@ -5,6 +5,9 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { supabase } from "@/lib/supabaseClient";
 
+// 🔹 Importando imagem otimizada via Vite
+import subscriptionImage from "@/assets/subscription.png";
+
 const Subscribe = () => {
   const navigate = useNavigate();
   const { t } = useLanguage();
@@ -26,7 +29,7 @@ const Subscribe = () => {
         console.error(error);
         alert("Ocorreu um erro ao enviar sua inscrição. Tente novamente.");
       } else {
-        setSubmitted(true); // mostra a mensagem de sucesso
+        setSubmitted(true);
       }
     } catch (err) {
       console.error(err);
@@ -36,7 +39,7 @@ const Subscribe = () => {
 
   return (
     <div className="min-h-screen bg-[#FFF9E8] flex flex-col justify-center items-center px-6 py-10 relative">
-      {/* 🔹 Botão de idioma fixo, flutuante no canto superior direito */}
+      {/* 🔹 Botão de idioma fixo */}
       <div className="absolute top-4 right-6">
         <LanguageSwitcher />
       </div>
@@ -46,7 +49,7 @@ const Subscribe = () => {
         {/* Imagem */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <img
-            src="./public/subscription.png"
+            src={subscriptionImage}
             alt="Educação"
             className="rounded-2xl shadow-lg w-full max-w-md object-cover"
           />
@@ -86,7 +89,6 @@ const Subscribe = () => {
               </form>
             </>
           ) : (
-            // 🔹 Mensagem após envio
             <div className="animate-in fade-in duration-700">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 {t.subscribe.successTitle}
@@ -97,7 +99,6 @@ const Subscribe = () => {
             </div>
           )}
 
-          {/* 🔹 Botão de voltar sempre visível abaixo */}
           <Button
             variant="link"
             onClick={() => navigate("/")}

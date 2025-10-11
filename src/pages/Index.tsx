@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { LanguageSwitcher, Language } from "@/components/LanguageSwitcher";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useNavigate } from "react-router-dom";
 import {
@@ -17,8 +17,11 @@ import {
   X,
 } from "lucide-react";
 
+import heroBg from "@/assets/Hero.png";
+import logo from "@/assets/logo_thinking.png";
+
 const Index = () => {
-  const { t, language, setLanguage } = useLanguage();
+  const { t, setLanguage } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -72,9 +75,10 @@ const Index = () => {
             onClick={() => navigate("/")}
           >
             <img
-              src="/logo_thinking.png"
+              src={logo}
               alt="ThinkForge logo"
               className="h-7 w-7 object-contain"
+              loading="lazy"
             />
             <span className="text-base sm:text-lg md:text-xl font-bold bg-gradient-hero bg-clip-text text-transparent whitespace-nowrap">
               ThinkForge
@@ -151,9 +155,10 @@ const Index = () => {
       <section
         className="relative overflow-hidden py-20 md:py-32 bg-cover bg-center bg-no-repeat w-full max-w-[100vw]"
         style={{
-          backgroundImage: "url('../public/Hero.png')",
+          backgroundImage: `url(${heroBg})`,
         }}
       >
+        {/* Overlay escuro para contraste */}
         <div className="absolute inset-0 bg-black/40" />
 
         <div className="container mx-auto px-4 relative z-10">

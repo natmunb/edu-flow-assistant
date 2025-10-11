@@ -1,10 +1,8 @@
+export type Language = 'en' | 'es' | 'pt';
+
 export const translations = {
   en: {
-    nav: {
-      home: "Home",
-      features: "Features",
-      subscribe: "Join Waitlist",
-    },
+    nav: { home: "Home", features: "Features", subscribe: "Join Waitlist" },
     hero: {
       title: "Strategic Lesson Planning",
       subtitle: "Powered by AI",
@@ -17,18 +15,15 @@ export const translations = {
       title: "Powerful Features for Modern Education",
       transcription: {
         title: "Auto Transcription",
-        description:
-          "Record and transcribe classes automatically with AI-powered accuracy.",
+        description: "Record and transcribe classes automatically with AI-powered accuracy.",
       },
       structure: {
         title: "Content Structuring",
-        description:
-          "Automatically organize lessons into logical sections and topics.",
+        description: "Automatically organize lessons into logical sections and topics.",
       },
       compliance: {
         title: "IB Compliance",
-        description:
-          "Verify alignment with International Baccalaureate standards.",
+        description: "Verify alignment with International Baccalaureate standards.",
       },
       interaction: {
         title: "Student Questions",
@@ -36,8 +31,7 @@ export const translations = {
       },
       adaptive: {
         title: "Adaptive Learning",
-        description:
-          "Personalized recommendations based on student performance.",
+        description: "Personalized recommendations based on student performance.",
       },
       analytics: {
         title: "Performance Analytics",
@@ -46,24 +40,40 @@ export const translations = {
     },
     subscribe: {
       title: "Join the Waitlist",
-      description:
-        "Secure your spot and be the first to test our AI-powered teaching tools.",
+      description: "Secure your spot and be the first to test our AI-powered teaching tools.",
       namePlaceholder: "Your name",
       emailPlaceholder: "Your e-mail",
       button: "Join",
       back: "Back to Home",
       successTitle: "You’re In!",
-      successMessage:
-        "Thanks for joining our waitlist. We’ll be in touch soon!",
+      successMessage: "Thanks for joining our waitlist. We’ll be in touch soon!",
+    },
+    dashboard: {
+      title: "Dashboard",
+      teacherName: "Angelo Antonello Borges",
+      teacherRole: "Programming Teacher",
+      totalTasks: "Total Tasks",
+      classes: "Classes",
+      students: "Students",
+      pendingTasks: "Pending Tasks",
+      overview: "Task Overview",
+      deadlines: "Upcoming Deadlines",
+      taskByClass: "Task by Class",
+      taskPriority: "Task Priority",
+    },
+    tasks: {
+      title: "New Lesson Task",
+      audioInput: "Audio Input",
+      materials: "Complementary Materials",
+      lessonPlan: "Lesson Plan",
+      process: "Process Task",
+      resultTitle: "Consolidated Analysis",
+      resultHelp: "Processed data will appear here after submission.",
     },
   },
 
   es: {
-    nav: {
-      home: "Inicio",
-      features: "Características",
-      subscribe: "Lista de Espera",
-    },
+    nav: { home: "Inicio", features: "Características", subscribe: "Lista de Espera" },
     hero: {
       title: "Planificación Estratégica de Lecciones",
       subtitle: "Impulsado por IA",
@@ -76,28 +86,23 @@ export const translations = {
       title: "Funciones Poderosas para la Educación Moderna",
       transcription: {
         title: "Transcripción Automática",
-        description:
-          "Graba y transcribe clases automáticamente con precisión de IA.",
+        description: "Graba y transcribe clases automáticamente con precisión de IA.",
       },
       structure: {
         title: "Estructuración de Contenido",
-        description:
-          "Organiza lecciones automáticamente en secciones y temas lógicos.",
+        description: "Organiza lecciones automáticamente en secciones y temas lógicos.",
       },
       compliance: {
         title: "Cumplimiento IB",
-        description:
-          "Verifica la alineación con los estándares del Bachillerato Internacional.",
+        description: "Verifica la alineación con los estándares del Bachillerato Internacional.",
       },
       interaction: {
         title: "Preguntas de Estudiantes",
-        description:
-          "Habilita la participación estudiantil en tiempo real y asíncrona.",
+        description: "Habilita la participación estudiantil en tiempo real y asíncrona.",
       },
       adaptive: {
         title: "Aprendizaje Adaptativo",
-        description:
-          "Recomendaciones personalizadas basadas en el rendimiento del estudiante.",
+        description: "Recomendaciones personalizadas basadas en el rendimiento del estudiante.",
       },
       analytics: {
         title: "Analíticas de Rendimiento",
@@ -113,17 +118,34 @@ export const translations = {
       button: "Inscribirme",
       back: "Volver al Inicio",
       successTitle: "¡Estás dentro!",
-      successMessage:
-        "Gracias por unirte a nuestra lista de espera. ¡Te contactaremos pronto!",
+      successMessage: "Gracias por unirte a nuestra lista de espera. ¡Te contactaremos pronto!",
+    },
+    dashboard: {
+      title: "Panel de Control",
+      teacherName: "Angelo Antonello Borges",
+      teacherRole: "Profesor de Programación",
+      totalTasks: "Tareas Totales",
+      classes: "Clases",
+      students: "Estudiantes",
+      pendingTasks: "Tareas Pendientes",
+      overview: "Resumen de Tareas",
+      deadlines: "Próximas Fechas Límite",
+      taskByClass: "Tareas por Clase",
+      taskPriority: "Prioridad de las Tareas",
+    },
+    tasks: {
+      title: "Nueva Tarea de Lección",
+      audioInput: "Entrada de Audio",
+      materials: "Materiales Complementarios",
+      lessonPlan: "Plan de Lección",
+      process: "Procesar Tarea",
+      resultTitle: "Análisis Consolidado",
+      resultHelp: "Los datos procesados aparecerán aquí después del envío.",
     },
   },
 
   pt: {
-    nav: {
-      home: "Início",
-      features: "Funcionalidades",
-      subscribe: "Fila de Espera",
-    },
+    nav: { home: "Início", features: "Funcionalidades", subscribe: "Fila de Espera" },
     hero: {
       title: "Planejamento Estratégico de Aulas",
       subtitle: "Potencializado por IA",
@@ -136,18 +158,15 @@ export const translations = {
       title: "Funcionalidades Poderosas para a Educação Moderna",
       transcription: {
         title: "Transcrição Automática",
-        description:
-          "Grave e transcreva aulas automaticamente com precisão de IA.",
+        description: "Grave e transcreva aulas automaticamente com precisão de IA.",
       },
       structure: {
         title: "Estruturação de Conteúdo",
-        description:
-          "Organize as aulas automaticamente em seções e tópicos lógicos.",
+        description: "Organize as aulas automaticamente em seções e tópicos lógicos.",
       },
       compliance: {
         title: "Conformidade IB",
-        description:
-          "Verifique o alinhamento com os padrões do Bacharelado Internacional.",
+        description: "Verifique o alinhamento com os padrões do Bacharelado Internacional.",
       },
       interaction: {
         title: "Interação com Alunos",
@@ -155,8 +174,7 @@ export const translations = {
       },
       adaptive: {
         title: "Aprendizado Adaptativo",
-        description:
-          "Recomendações personalizadas com base no desempenho dos alunos.",
+        description: "Recomendações personalizadas com base no desempenho dos alunos.",
       },
       analytics: {
         title: "Análises de Desempenho",
@@ -165,14 +183,35 @@ export const translations = {
     },
     subscribe: {
       title: "Entre na Fila de Espera",
-      description:
-        "Garanta seu lugar e seja o primeiro a testar nossas ferramentas de ensino com IA.",
+      description: "Garanta seu lugar e seja o primeiro a testar nossas ferramentas de ensino com IA.",
       namePlaceholder: "Seu nome",
       emailPlaceholder: "Seu e-mail",
       button: "Me inscrever",
       back: "← Voltar para o menu Home",
-      success: "Você foi adicionado à fila de espera!",
-      error: "Ocorreu um erro. Tente novamente.",
+      successTitle: "Inscrição realizada!",
+      successMessage: "Você foi adicionado à fila de espera. Em breve entraremos em contato.",
+    },
+    dashboard: {
+      title: "Painel de Controle",
+      teacherName: "Angelo Antonello Borges",
+      teacherRole: "Professor de Programação",
+      totalTasks: "Tarefas Totais",
+      classes: "Turmas",
+      students: "Alunos",
+      pendingTasks: "Tarefas Pendentes",
+      overview: "Visão Geral das Tarefas",
+      deadlines: "Próximos Prazos",
+      taskByClass: "Tarefas por Turma",
+      taskPriority: "Prioridade das Tarefas",
+    },
+    tasks: {
+      title: "Nova Tarefa de Aula",
+      audioInput: "Entrada de Áudio",
+      materials: "Materiais Complementares",
+      lessonPlan: "Plano de Aula",
+      process: "Processar Tarefa",
+      resultTitle: "Análise Consolidada",
+      resultHelp: "Os dados processados aparecerão aqui após o envio.",
     },
   },
-};
+} as const;
