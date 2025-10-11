@@ -4,57 +4,41 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { LanguageSwitcher, Language } from '@/components/LanguageSwitcher';
 import { translations } from '@/lib/translations';
-import { 
-  Plus, 
-  Users, 
-  MessageCircle, 
-  Clock,
-  Sparkles,
-  BarChart3,
-  BookOpen,
-} from 'lucide-react';
+import { Plus, Users, MessageCircle, Clock, Sparkles, BarChart3, BookOpen } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-
 const Dashboard = () => {
   const [language, setLanguage] = useState<Language>('en');
   const t = translations[language];
   const navigate = useNavigate();
-
-  const mockClasses = [
-    {
-      id: 1,
-      name: 'Advanced Biology - Cellular Processes',
-      subject: 'Biology',
-      students: 28,
-      date: '2025-01-09',
-      duration: '45 min',
-      questions: 12,
-      status: 'completed',
-    },
-    {
-      id: 2,
-      name: 'International Relations - Modern Conflicts',
-      subject: 'History',
-      students: 32,
-      date: '2025-01-08',
-      duration: '60 min',
-      questions: 8,
-      status: 'completed',
-    },
-    {
-      id: 3,
-      name: 'Calculus II - Integration Techniques',
-      subject: 'Mathematics',
-      students: 24,
-      date: '2025-01-07',
-      duration: '50 min',
-      questions: 15,
-      status: 'completed',
-    },
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const mockClasses = [{
+    id: 1,
+    name: 'Advanced Biology - Cellular Processes',
+    subject: 'Biology',
+    students: 28,
+    date: '2025-01-09',
+    duration: '45 min',
+    questions: 12,
+    status: 'completed'
+  }, {
+    id: 2,
+    name: 'International Relations - Modern Conflicts',
+    subject: 'History',
+    students: 32,
+    date: '2025-01-08',
+    duration: '60 min',
+    questions: 8,
+    status: 'completed'
+  }, {
+    id: 3,
+    name: 'Calculus II - Integration Techniques',
+    subject: 'Mathematics',
+    students: 24,
+    date: '2025-01-07',
+    duration: '50 min',
+    questions: 15,
+    status: 'completed'
+  }];
+  return <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border bg-card">
         <div className="container mx-auto px-4 py-4">
@@ -62,20 +46,14 @@ const Dashboard = () => {
             <div className="flex items-center gap-2">
               <Sparkles className="h-6 w-6 text-primary" />
               <span className="text-xl font-bold bg-gradient-hero bg-clip-text text-transparent">
-                ThinkForge
+                LessonAI
               </span>
             </div>
             <div className="flex items-center gap-4">
-              <Button 
-                variant="ghost" 
-                onClick={() => navigate('/')}
-              >
+              <Button variant="ghost" onClick={() => navigate('/')}>
                 Home
               </Button>
-              <Button 
-                variant="ghost" 
-                onClick={() => navigate('/analytics')}
-              >
+              <Button variant="ghost" onClick={() => navigate('/analytics')}>
                 <BarChart3 className="h-4 w-4 mr-2" />
                 Analytics
               </Button>
@@ -85,7 +63,7 @@ const Dashboard = () => {
         </div>
       </header>
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 bg-amber-50">
         {/* Dashboard Header */}
         <div className="mb-8">
           <h1 className="text-4xl font-bold mb-2">{t.dashboard.title}</h1>
@@ -125,22 +103,14 @@ const Dashboard = () => {
         {/* Classes Section */}
         <div className="mb-6 flex items-center justify-between">
           <h2 className="text-2xl font-bold">{t.dashboard.myClasses}</h2>
-          <Button 
-            className="gap-2"
-            onClick={() => navigate('/record')}
-          >
+          <Button className="gap-2" onClick={() => navigate('/record')}>
             <Plus className="h-4 w-4" />
             {t.dashboard.newClass}
           </Button>
         </div>
 
         <div className="grid gap-4">
-          {mockClasses.map((classItem) => (
-            <Card 
-              key={classItem.id} 
-              className="p-6 hover:shadow-lg transition-all duration-300 cursor-pointer bg-gradient-card"
-              onClick={() => navigate(`/class/${classItem.id}`)}
-            >
+          {mockClasses.map(classItem => <Card key={classItem.id} className="p-6 hover:shadow-lg transition-all duration-300 cursor-pointer bg-gradient-card" onClick={() => navigate(`/class/${classItem.id}`)}>
               <div className="flex items-start justify-between mb-4">
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold mb-2">{classItem.name}</h3>
@@ -168,12 +138,9 @@ const Dashboard = () => {
                   {new Date(classItem.date).toLocaleDateString()}
                 </div>
               </div>
-            </Card>
-          ))}
+            </Card>)}
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Dashboard;
