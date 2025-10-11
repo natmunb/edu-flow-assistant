@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { BarChart3, CheckCircle, ListTodo, Users, Settings } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -13,22 +14,42 @@ const Dashboard = () => {
             <h1 className="text-xl font-bold text-[#1E3A8A]">ThinkForge</h1>
           </div>
 
+          {/* ✅ Navegação com React Router */}
           <nav className="space-y-4 text-sm font-medium">
-            <a href="#" className="flex items-center gap-3 text-[#1E3A8A]">
+            <Link
+              to="/dashboard"
+              className="flex items-center gap-3 text-[#1E3A8A] font-semibold"
+            >
               <BarChart3 className="h-4 w-4" /> Dashboard
-            </a>
-            <a href="#" className="flex items-center gap-3 hover:text-[#1E3A8A]">
+            </Link>
+
+            <Link
+              to="/tasks"
+              className="flex items-center gap-3 hover:text-[#1E3A8A] transition"
+            >
               <ListTodo className="h-4 w-4" /> Tasks
-            </a>
-            <a href="#" className="flex items-center gap-3 hover:text-[#1E3A8A]">
+            </Link>
+
+            <Link
+              to="/analytics"
+              className="flex items-center gap-3 hover:text-[#1E3A8A] transition"
+            >
               <CheckCircle className="h-4 w-4" /> Analytics
-            </a>
-            <a href="#" className="flex items-center gap-3 hover:text-[#1E3A8A]">
+            </Link>
+
+            <Link
+              to="/team"
+              className="flex items-center gap-3 hover:text-[#1E3A8A] transition"
+            >
               <Users className="h-4 w-4" /> Team
-            </a>
-            <a href="#" className="flex items-center gap-3 hover:text-[#1E3A8A]">
+            </Link>
+
+            <Link
+              to="/settings"
+              className="flex items-center gap-3 hover:text-[#1E3A8A] transition"
+            >
               <Settings className="h-4 w-4" /> Settings
-            </a>
+            </Link>
           </nav>
         </div>
 
@@ -82,9 +103,9 @@ const Dashboard = () => {
           <Card className="p-6 bg-white/80 border border-gray-200 shadow-md">
             <h3 className="text-lg font-semibold mb-4 text-[#1E3A8A]">Upcoming Deadlines</h3>
             <ul className="text-sm space-y-2 text-gray-700">
-              <li>📘 Math - Unit 6 Assessment (2 days left)</li>
-              <li>🧮 Algebra Review (4 days left)</li>
-              <li>🧠 Critical Thinking Project (1 week left)</li>
+              <li>Math - Unit 6 Assessment (2 days left)</li>
+              <li>Algebra Review (4 days left)</li>
+              <li>Critical Thinking Project (1 week left)</li>
             </ul>
           </Card>
         </section>
