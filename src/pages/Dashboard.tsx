@@ -95,9 +95,11 @@ const Dashboard = () => {
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           <Card className="p-6 bg-white/80 border border-gray-200 shadow-md col-span-2">
             <h3 className="text-lg font-semibold mb-4 text-[#1E3A8A]">Task Overview</h3>
-            <div className="h-48 bg-[#E5E9F2] rounded-lg flex items-center justify-center text-gray-500">
-              Chart Placeholder
-            </div>
+            <img
+              src="../public/chart1.png"
+              alt="Task Overview Chart"
+              className="h-48 w-full object-contain rounded-lg"
+            />
           </Card>
 
           <Card className="p-6 bg-white/80 border border-gray-200 shadow-md">
@@ -114,16 +116,20 @@ const Dashboard = () => {
         <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card className="p-6 bg-white/80 border border-gray-200 shadow-md">
             <h3 className="text-lg font-semibold mb-4 text-[#1E3A8A]">Task by Class</h3>
-            <div className="h-40 bg-[#E5E9F2] rounded-lg flex items-center justify-center text-gray-500">
-              Chart 1 Placeholder
-            </div>
+            <img
+              src="../public/chart2.png"
+              alt="Task Overview Chart"
+              className="h-48 w-full object-contain rounded-lg"
+            />
           </Card>
 
           <Card className="p-6 bg-white/80 border border-gray-200 shadow-md">
             <h3 className="text-lg font-semibold mb-4 text-[#1E3A8A]">Task Priority</h3>
-            <div className="h-40 bg-[#E5E9F2] rounded-lg flex items-center justify-center text-gray-500">
-              Chart 2 Placeholder
-            </div>
+            <img
+              src="../public/chart1.png"
+              alt="Task Overview Chart"
+              className="h-48 w-full object-contain rounded-lg"
+            />
           </Card>
         </section>
       </main>

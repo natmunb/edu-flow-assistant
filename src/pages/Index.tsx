@@ -228,19 +228,6 @@ const Index = () => {
             <p className="text-xl text-muted-foreground mb-12">
               Join thousands of educators using AI to enhance their lessons.
             </p>
-
-            <div
-              id="demo-video"
-              className="relative w-full max-w-3xl mx-auto aspect-video mb-10 rounded-2xl overflow-hidden shadow-xl scroll-mt-24"
-            >
-              <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="ThinkForge demo video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full border-0"
-              />
-            </div>
           </div>
         </div>
       </section>
