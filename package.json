@@ -80,5 +80,17 @@
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.38.0",
     "vite": "^5.4.19"
-  }
+  },
+  "description": "**URL**: https://lovable.dev/projects/d48bc117-4265-4477-b401-0d1ef11cab82",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natmunb/edu-flow-assistant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natmunb/edu-flow-assistant/issues"
+  },
+  "homepage": "https://github.com/natmunb/edu-flow-assistant#readme"
 }

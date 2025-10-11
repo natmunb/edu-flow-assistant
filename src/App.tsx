@@ -9,6 +9,7 @@ import RecordClass from "./pages/RecordClass";
 import ClassView from "./pages/ClassView";
 import Analytics from "./pages/Analytics";
 import NotFound from "./pages/NotFound";
+import Subscribe from "./pages/Subscribe";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/analytics" element={<Analytics />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
+          <Route path="/subscribe" element={<Subscribe />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
