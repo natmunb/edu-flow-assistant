@@ -1,20 +1,13 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Globe } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Globe } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-export type Language = 'en' | 'es';
-
-interface LanguageSwitcherProps {
-  onLanguageChange?: (lang: Language) => void;
-}
-
-export const LanguageSwitcher = ({ onLanguageChange }: LanguageSwitcherProps) => {
-  const [language, setLanguage] = useState<Language>('en');
+export const LanguageSwitcher = () => {
+  const { language, setLanguage } = useLanguage();
 
   const toggleLanguage = () => {
-    const newLang: Language = language === 'en' ? 'es' : 'en';
+    const newLang = language === "en" ? "es" : "en";
     setLanguage(newLang);
-    onLanguageChange?.(newLang);
   };
 
   return (

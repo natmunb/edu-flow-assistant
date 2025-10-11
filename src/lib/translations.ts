@@ -3,9 +3,7 @@ export const translations = {
     nav: {
       home: "Home",
       features: "Features",
-      subscribe: "Join Waitlist", // 🆕 novo
-      dashboard: "Dashboard",
-      analytics: "Analytics",
+      subscribe: "Join Waitlist",
     },
     hero: {
       title: "Strategic Lesson Planning",
@@ -46,33 +44,36 @@ export const translations = {
         description: "Comprehensive insights for teachers and students.",
       },
     },
-    dashboard: {
-      title: "Teacher Dashboard",
-      myClasses: "My Classes",
-      newClass: "New Class",
-      students: "Students",
-      questions: "Questions",
+    subscribe: {
+      title: "Join the Waitlist",
+      description:
+        "Secure your spot and be the first to test our AI-powered teaching tools.",
+      namePlaceholder: "Your name",
+      emailPlaceholder: "Your e-mail",
+      button: "Join",
+      back: "Back to Home",
+      successTitle: "You’re In!",
+      successMessage:
+        "Thanks for joining our waitlist. We’ll be in touch soon!",
     },
   },
+
   es: {
     nav: {
       home: "Inicio",
       features: "Características",
-      subscribe: "Unirse a la lista", // 🆕 novo
-      dashboard: "Panel",
-      analytics: "Analíticas",
+      subscribe: "Lista de Espera",
     },
-
     hero: {
       title: "Planificación Estratégica de Lecciones",
       subtitle: "Impulsado por IA",
       description:
-        "Transforma tu enseñanza con transcripción impulsada por IA, verificación de cumplimiento IB e insights de aprendizaje adaptativo.",
+        "Transforma tu enseñanza con transcripción impulsada por IA, verificación de cumplimiento IB e insights adaptativos.",
       cta: "Comenzar",
       demo: "Ver Demo",
     },
     features: {
-      title: "Características Poderosas para la Educación Moderna",
+      title: "Funciones Poderosas para la Educación Moderna",
       transcription: {
         title: "Transcripción Automática",
         description:
@@ -103,14 +104,75 @@ export const translations = {
         description: "Información completa para profesores y estudiantes.",
       },
     },
-    dashboard: {
-      title: "Panel del Profesor",
-      myClasses: "Mis Clases",
-      newClass: "Nueva Clase",
-      students: "Estudiantes",
-      questions: "Preguntas",
+    subscribe: {
+      title: "Únete a la Lista de Espera",
+      description:
+        "Asegura tu lugar y sé de los primeros en probar nuestras herramientas de enseñanza impulsadas por IA.",
+      namePlaceholder: "Tu nombre",
+      emailPlaceholder: "Tu e-mail",
+      button: "Inscribirme",
+      back: "Volver al Inicio",
+      successTitle: "¡Estás dentro!",
+      successMessage:
+        "Gracias por unirte a nuestra lista de espera. ¡Te contactaremos pronto!",
+    },
+  },
+
+  pt: {
+    nav: {
+      home: "Início",
+      features: "Funcionalidades",
+      subscribe: "Fila de Espera",
+    },
+    hero: {
+      title: "Planejamento Estratégico de Aulas",
+      subtitle: "Potencializado por IA",
+      description:
+        "Transforme seu ensino com transcrição automática, verificação de conformidade e insights personalizados.",
+      cta: "Começar",
+      demo: "Ver Demo",
+    },
+    features: {
+      title: "Funcionalidades Poderosas para a Educação Moderna",
+      transcription: {
+        title: "Transcrição Automática",
+        description:
+          "Grave e transcreva aulas automaticamente com precisão de IA.",
+      },
+      structure: {
+        title: "Estruturação de Conteúdo",
+        description:
+          "Organize as aulas automaticamente em seções e tópicos lógicos.",
+      },
+      compliance: {
+        title: "Conformidade IB",
+        description:
+          "Verifique o alinhamento com os padrões do Bacharelado Internacional.",
+      },
+      interaction: {
+        title: "Interação com Alunos",
+        description: "Permita engajamento em tempo real e de forma assíncrona.",
+      },
+      adaptive: {
+        title: "Aprendizado Adaptativo",
+        description:
+          "Recomendações personalizadas com base no desempenho dos alunos.",
+      },
+      analytics: {
+        title: "Análises de Desempenho",
+        description: "Insights completos para professores e estudantes.",
+      },
+    },
+    subscribe: {
+      title: "Entre na Fila de Espera",
+      description:
+        "Garanta seu lugar e seja o primeiro a testar nossas ferramentas de ensino com IA.",
+      namePlaceholder: "Seu nome",
+      emailPlaceholder: "Seu e-mail",
+      button: "Me inscrever",
+      back: "← Voltar para o menu Home",
+      success: "Você foi adicionado à fila de espera!",
+      error: "Ocorreu um erro. Tente novamente.",
     },
   },
 };
-
-export type TranslationKey = typeof translations.en;

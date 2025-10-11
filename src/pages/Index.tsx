@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { LanguageSwitcher, Language } from "@/components/LanguageSwitcher";
 import { translations } from "@/lib/translations";
+import { useLanguage } from "@/contexts/LanguageContext";
+
 import {
   Mic,
   BookOpen,
@@ -18,9 +20,8 @@ import {
 import { useNavigate } from "react-router-dom";
 
 const Index = () => {
-  const [language, setLanguage] = useState<Language>("en");
+  const { t, language, setLanguage } = useLanguage(); // ✅ único ponto de tradução
   const [menuOpen, setMenuOpen] = useState(false);
-  const t = translations[language];
   const navigate = useNavigate();
 
   const features = [
