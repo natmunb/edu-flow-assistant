@@ -214,4 +214,4 @@ export const translations = {
       resultHelp: "Os dados processados aparecerão aqui após o envio.",
     },
   },
-} as const;
+};
