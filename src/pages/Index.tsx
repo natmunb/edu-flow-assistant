@@ -111,7 +111,7 @@ const Index = () => {
               {t.nav.subscribe || "Join Waitlist"}
             </Button>
 
-            <LanguageSwitcher onLanguageChange={setLanguage} />
+            <LanguageSwitcher />
           </div>
         </div>
 
@@ -142,12 +142,7 @@ const Index = () => {
             {t.nav.subscribe || "Join Waitlist"}
           </Button>
 
-          <LanguageSwitcher
-            onLanguageChange={(lang) => {
-              setLanguage(lang);
-              setMenuOpen(false);
-            }}
-          />
+          <LanguageSwitcher />
         </div>
       </nav>
 
