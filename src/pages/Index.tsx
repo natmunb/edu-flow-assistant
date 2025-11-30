@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 
 import heroBg from "@/assets/Hero.png";
-import logo from "@/assets/logo_thinking.png";
+import logo from "@/assets/logo_tf.png";
 
 const Index = () => {
   const { t, setLanguage } = useLanguage();

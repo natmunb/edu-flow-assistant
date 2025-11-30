@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 // 🔹 IMPORTES DE IMAGENS (garante que apareçam em dev e produção)
-import logo from "@/assets/logo_thinking.png";
+import logo from "@/assets/logo_tf.png";
 import chart1 from "@/assets/chart1.png";
 import chart2 from "@/assets/chart2.png";
 
