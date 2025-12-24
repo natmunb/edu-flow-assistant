@@ -1,14 +1,8 @@
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+// DEPRECATED: Use @/integrations/supabase/client instead
+// This file exists for backwards compatibility only
 
-console.log("URL:", import.meta.env.VITE_SUPABASE_URL);
-console.log("KEY:", import.meta.env.VITE_SUPABASE_ANON_KEY?.slice(0, 10) + "...");
-console.log("🧪 VITE ENV:", import.meta.env.VITE_SUPABASE_URL);
+import { supabase as supabaseClient } from "@/integrations/supabase/client";
 
-if (!supabaseUrl || !supabaseKey) {
-  throw new Error("Supabase URL or Key not found. Check your .env file.");
-}
-
-export const supabase = createClient(supabaseUrl, supabaseKey);
+export const supabase = supabaseClient;
